@@ -122,7 +122,8 @@ if ($_REQUEST['id']) {
 <?php include('menu.php'); ?>
 <br>
 <?php if ($mens) { ?>
-	<div align="center"><p class="mens"><?php print $mens ?></p></div>
+	<div align="center" id="mens"><p class="mens"><?php print $mens ?></p></div>
+	<script> $("#mens").fadeOut(5000, function() { $(this).remove(); }); </script>
 <?php } ?>
 <br>
 <form name="form1" id="form1" method="post">
@@ -137,7 +138,7 @@ if ($_REQUEST['id']) {
 			</tr>
 			<tr>
 				<td align="right">Ativo</td>
-				<td align="left"><input type="checkbox" name="ativo" id="ativo" class="text_input" value="1" <?php if (($arr_usuario['ativo'] == 1) || (!$_REQUEST['id'])) { print 'checked'; } ?> /></td>
+				<td align="left"><input type="checkbox" name="ativo" id="ativo" class="text_input" value="1" <?php if (($arr_sala['ativo'] == 1) || (!$_REQUEST['id'])) { print 'checked'; } ?> /></td>
 			</tr>
 			<tr>
 				<th colspan="2">

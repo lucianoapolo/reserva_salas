@@ -1,5 +1,8 @@
 ﻿<?php
 
+session_start();
+session_destroy();
+
 include('header.php');
 
 if ($_REQUEST['logar'] == "Logar") {
@@ -10,7 +13,7 @@ if ($_REQUEST['logar'] == "Logar") {
 
 		$table_usuarios = new Table_DB('usuarios');
 		
-		$arr_usuario = $table_usuarios->getRow(false, array('login' => trim($_REQUEST['login']), 'senha' => trim(md5($_REQUEST['senha']))), false);
+		$arr_usuario = $table_usuarios->getRow(false, array('login' => trim($_REQUEST['login']), 'senha' => md5(trim($_REQUEST['senha'])), 'ativo' => '1'), false);
 		
 		if ($arr_usuario['id']) {
 		
@@ -54,7 +57,8 @@ if ($_REQUEST['logar'] == "Logar") {
 <br>
 <br>
 <?php if ($mens) { ?>
-	<div align="center"><p class="mens"><?php print $mens ?></p></div>
+	<div align="center" id="mens"><p class="mens"><?php print $mens ?></p></div>
+	<script> $("#mens").fadeOut(5000, function() { $(this).remove(); }); </script>
 <?php } ?>
 <form name="form1" id="form1" method="post">
 	<div align="center">

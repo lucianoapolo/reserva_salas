@@ -86,7 +86,7 @@ if ($_REQUEST['action'] == 'Editar') {
 			$table_usuarios->set($id);
 			
 			if (trim($_REQUEST['senha'])) {
-				$table_usuarios->update(array('nome' => trim($_REQUEST['nome']), 'login' => trim($_REQUEST['login']), 'senha' => trim(md5($_REQUEST['senha'])), 'ativo' => $ativo));
+				$table_usuarios->update(array('nome' => trim($_REQUEST['nome']), 'login' => trim($_REQUEST['login']), 'senha' => md5(trim($_REQUEST['senha'])), 'ativo' => $ativo));
 			} else {
 				$table_usuarios->update(array('nome' => trim($_REQUEST['nome']), 'login' => trim($_REQUEST['login']), 'ativo' => $ativo));			
 			}
@@ -157,7 +157,8 @@ if ($_REQUEST['id']) {
 <?php include('menu.php'); ?>
 <br>
 <?php if ($mens) { ?>
-	<div align="center"><p class="mens"><?php print $mens ?></p></div>
+	<div align="center" id="mens"><p class="mens"><?php print $mens ?></p></div>
+	<script> $("#mens").fadeOut(5000, function() { $(this).remove(); }); </script>
 <?php } ?>
 <br>
 <form name="form1" id="form1" method="post">

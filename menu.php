@@ -5,4 +5,5 @@
   <li><a href="listar_salas.php">Listar Salas</a></li>
   <li><a href="reserva.php">Inserir Reserva</a></li>
   <li><a href="listar_reservas.php">Listar Reservas</a></li>
+  <li><a href="index.php">Sair</a></li>
 </ul>

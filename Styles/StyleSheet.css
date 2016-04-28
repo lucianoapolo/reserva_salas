@@ -1,0 +1,139 @@
+﻿.text_normal
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.text_relatorio
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.text_titulo
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.table_titulo
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: #5D7B9D;
+}
+
+.text_label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #5D7B9D;
+}
+
+select
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #5D7B9D;
+}
+
+input
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #5D7B9D;
+    margin-left: 0px;
+}
+
+checkbox
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #5D7B9D;
+    margin-left: 0px;
+}
+
+textarea
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #5D7B9D;
+    margin-left: 0px;
+}
+
+label.error
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FF0000;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.mens
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FF0000;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.cellWrap
+{
+    overflow: hidden;
+    white-space: normal;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5D7B9D;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 4px 10px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: #5D7B9D;
+    background-color: #EEE;
+}
+
+li a.active {
+    color: #FFF;
+    background-color: #5D7B9D;
+}
+
+.text_normal a{
+	color: #5D7B9D;
+	text-decoration: none;
+}
+
+.text_normal a:hover{
+	color: #5D7B9D;
+	text-decoration: underline;
+}

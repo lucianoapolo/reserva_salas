@@ -38,13 +38,19 @@ class Table_DB extends DB
 		}
 
 		if (is_array($arr_where)) {
+			
 			foreach ($arr_where as $key => $value) {
+				
+				$value = $this->DB->real_escape_string($value);
+				
 				if ($where) {
 					$where .= " AND $key = '$value'";
 				} else {
 					$where .= " WHERE $key = '$value'";
 				}
+			
 			}
+		
 		}
 		
 		if (is_array($arr_order)) {
@@ -67,13 +73,19 @@ class Table_DB extends DB
 		}
 
 		if (is_array($arr_where)) {
+			
 			foreach ($arr_where as $key => $value) {
+				
+				$value = $this->DB->real_escape_string($value);
+				
 				if ($where) {
 					$where .= " AND $key = '$value'";
 				} else {
 					$where .= " WHERE $key = '$value'";
 				}
+			
 			}
+		
 		}
 		
 		if (is_array($arr_order)) {
@@ -90,6 +102,8 @@ class Table_DB extends DB
 	public function insert($arr_fields) {
 	
 		foreach($arr_fields as $key => $value) {
+		
+			$value = $this->DB->real_escape_string($value);
 			
 			if ($columns) {
 				$columns .= ", $key";
@@ -120,11 +134,15 @@ class Table_DB extends DB
 	public function update($arr_fields) {
 		
 		foreach($arr_fields as $key => $value) {
+		
+			$value = $this->DB->real_escape_string($value);
+	
 			if ($set) {
 				$set .= ", $key = '$value'";
 			} else {
 				$set .= "$key = '$value'";
 			}
+		
 		}
 		
 		$sql = "UPDATE ".$this->table." SET $set WHERE id = ".$this->id;
